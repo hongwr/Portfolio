@@ -9,6 +9,7 @@
     <meta name="description" content="Portfolio created by junior developers" />
     <meta name="author" content="Hongwy" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <!--변경하기  -->
     <!-- favicon 추가 -->
     <script
       src="https://kit.fontawesome.com/554d8e7347.js"
@@ -29,17 +30,19 @@
     <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__log">
-        <img src="imgs/favicon.png" alt="사진이 없습니다." />
+        <i class="fa-solid fa-dragon"></i>
         <a href="#">WangYeol</a>
       </div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item">Home</li>
-        <li class="navbar__menu__item">About</li>
-        <li class="navbar__menu__item">Skills</li>
-        <li class="navbar__menu__item">My work</li>
-        <li class="navbar__menu__item">Testimonial</li>
-        <li class="navbar__menu__item">Contact</li>
-      </ul>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">My work</li>
+          <li class="navbar__menu__item">Testimonial</li>
+          <li class="navbar__menu__item">Contact</li>
+        </ul>
+      </div>
     </nav>
 
     <!-- HOME -->
@@ -58,7 +61,7 @@
       <button class="home__contact">CONTACT ME</button>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section section__container">
       <h1>About me</h1>
       <p>
         저는 꾸준히 발전해야 하는 개발이라는 것에 큰 매력을 느껴 프론트엔드
@@ -74,25 +77,26 @@
           <div class="major__icon">
             <i class="fa-brands fa-react"></i>
           </div>
-          <div class="major__title">Front-end</div>
+          <h2 class="major__title">Front-end</h2>
           <div class="major__description">
-            React, Redux(React-redux) HTML5, CSS3, Style-component
+            React, Redux(React-redux) HTML5,
+            <br />CSS3, Style-component
           </div>
         </div>
         <div class="major">
           <div class="major__icon">
-            <i classdiv="fa-brands fa-js-square"></i>
+            <i class="fa-brands fa-js"></i>
           </div>
-          <div class="major__title">Front-end</div>
+          <h2 class="major__title">Front-end</h2>
           <div class="major__description">Javascript, Typescript</div>
         </div>
         <div class="major">
           <div class="major__icon">
             <i class="fa-brands fa-aws"></i>
           </div>
-          <div class="major__title">Others</div>
+          <h2 class="major__title">Others</h2>
           <div class="major__description">
-            AWS(EC2, S3, RDS), Postman,Git, Node.js, Express.js, MySQL
+            AWS(EC2, S3, RDS), Postman,Git, <br />Node.js, Express.js, MySQL
           </div>
         </div>
       </div>
@@ -103,93 +107,106 @@
             alt="코드스테이츠 로고"
             class="education_logo"
           />
-          <p class="education__name">CodeStates</p>
-          <p class="education__period">2021.11 - 2022.04</p>
+          <div class="web__education">
+            <p class="education__name">CodeStates</p>
+            <p class="education__period">2021.11 - 2022.04</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
-      <h1>Skills</h1>
-      <h2>Skills & Attributes</h2>
-      <p>
-        저는 ReactJS를 활용하여 Web 개발이 가능하며, Typescript와 Redux를 사용한
-        Web 개발 경험이 있습니다. 새로운 Stack을 배우는 것에 관심이 많지만,
-        아직은 제가 알고 있다고 생각하는 것에도 많은 부족함을 느껴 계속
-        공부중입니다. 팀 환경에서 일하면서 트러블 없이 지속적인 소통과 대화로
-        문제없이 일을 할 수 있습니다.
-      </p>
-      <div class="skillset">
-        <div class="skillset__left">
-          <h3 class="skillset__title">Skills</h3>
-          <div class="skill">
-            <div class="skill__description">
-              <span>HTML</span>
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+          저는 ReactJS를 활용하여 Web 개발이 가능하며, Typescript와 Redux를
+          사용한 Web 개발 경험이 있습니다. 새로운 Stack을 배우는 것에 관심이
+          많지만, 아직은 제가 알고 있다고 생각하는 것에도 많은 부족함을 느껴
+          계속 공부중입니다. 팀 환경에서 일하면서 트러블 없이 지속적인 소통과
+          대화로 문제없이 일을 할 수 있습니다.
+        </p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
             </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>CSS</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>JAVASCRIPT</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>TYPESCRIPT</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>REACT</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
             </div>
           </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>CSS</span>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">ETC</h3>
+              <ul class="ETS__list">
+                <li><span>AWS</span></li>
+                <li><span>GIT</span></li>
+                <li><span>Node.js</span></li>
+                <li><span>Express.js</span></li>
+                <li><span>MySQL</span></li>
+              </ul>
             </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
+            <div class="etc">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="Tools__List">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>Atom</span></li>
+                <li><span>Google Fonts</span></li>
+              </ul>
             </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>JAVASCRIPT</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>TYPESCRIPT</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>REACT</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value"></div>
-            </div>
-          </div>
-        </div>
-        <div class="skillset__right">
-          <div class="tools">
-            <h3 class="skill__title">ETC</h3>
-            <ul class="ETS__list">
-              <li><span>AWS</span></li>
-              <li><span>GIT</span></li>
-              <li><span>Node.js</span></li>
-              <li><span>Express.js</span></li>
-              <li><span>MySQL</span></li>
-            </ul>
-          </div>
-          <div class="etc">
-            <h3 class="skill__title">Tools</h3>
-            <ul class="Tools__List">
-              <li><span>Visual Studio Code</span></li>
-              <li><span>Atom</span></li>
-              <li><span>Google Fonts</span></li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
       <h1>My work</h1>
       <h3>Projects</h3>
-      <div class="work__categories">Front-end</div>
+      <div class="work__categories">
+        <button class="category__btn active">
+          All
+          <span class="category__count">1</span>
+        </button>
+        <button class="category__btn">
+          Front-end
+          <span class="category__count">1</span>
+        </button>
+      </div>
       <div class="work__projects">
         <a
           href="https://github.com/codestates/torys-journey"
@@ -198,7 +215,7 @@
         >
           <img
             src="imgs/projects/torysjourney.PNG"
-            class="project_img"
+            class="project__img"
             alt="프로젝트 사진"
           />
           <div class="project__description">
@@ -209,8 +226,8 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
-      <h1 class="contact__title">Lets's talk</h1>
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">hongwr88@gmail.com</h2>
       <div class="contact__links">
         <a href="https://github.com/hongwr" target="_blank">
