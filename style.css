@@ -426,6 +426,27 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 
+/* Scroll */
+
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  border-radius: 50%;
+  color: var(--color-blue);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* 768px 화면 크기 이하에서 작동 */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {

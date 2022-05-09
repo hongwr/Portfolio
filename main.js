@@ -45,6 +45,22 @@ document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// arrow up 보이게 하기
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+// arrow up button 클릭
+
+arrowUp.addEventListener("click", () => {
+  scrollIntoViews("#home");
+});
+
 //중복 기능 유틸리티 함수로 설정
 function scrollIntoViews(selector) {
   const scrollTo = document.querySelector(selector);
