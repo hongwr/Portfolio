@@ -7,8 +7,8 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 //사이즈 보는 함수9눈에 보여지는 Element size. 크기 옵션이 전부 적용된 size. offsetwidth랑 비교
 
 document.addEventListener("scroll", () => {
-  //   console.log(window.scrollY);
-  //   console.log(navbarHeight);
+  // console.log(window.scrollY);
+  // console.log(navbarHeight);
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
   } else {
@@ -36,7 +36,16 @@ homeContactBtn.addEventListener("click", (e) => {
   scrollIntoViews("#contact");
 });
 
-//중복 기능 함수로 설정
+//스크롤을 내릴수록 화면 점점 투명하게 만들기
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//중복 기능 유틸리티 함수로 설정
 function scrollIntoViews(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
