@@ -16,7 +16,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Handle scrolling when tapping on the navbar menu
+// 네브바 메뉴 누를 시 스크롤 자동 이동(화면 이동)
 
 const navbarMenu = document.querySelector(".navbar__menu");
 
@@ -26,7 +26,18 @@ navbarMenu.addEventListener("click", (e) => {
   if (link === null) {
     return;
   }
-  console.log(e.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoViews(link);
 });
+
+// CONTACT ME 누를 시 이동
+const homeContactBtn = document.querySelector(".home__contact");
+
+homeContactBtn.addEventListener("click", (e) => {
+  scrollIntoViews("#contact");
+});
+
+//중복 기능 함수로 설정
+function scrollIntoViews(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
