@@ -4,7 +4,7 @@
 
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
-//사이즈 보는 함수9눈에 보여지는 Element size. 크기 옵션이 전부 적용된 size. offsetwidth랑 비교
+//사이즈 보는 함수. 눈에 보여지는 Element size. 크기 옵션이 전부 적용된 size. offsetwidth랑 비교
 
 document.addEventListener("scroll", () => {
   // console.log(window.scrollY);
@@ -61,8 +61,33 @@ arrowUp.addEventListener("click", () => {
   scrollIntoViews("#home");
 });
 
+// My work. project
+
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+console.log(projects);
+workBtnContainer.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter === null) {
+    return;
+  }
+
+  projectContainer.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
+});
+
 //중복 기능 유틸리티 함수로 설정
-function scrollIntoViews(selector) {
+const scrollIntoViews = (selector) => {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
-}
+};
