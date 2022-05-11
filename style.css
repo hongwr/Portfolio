@@ -42,7 +42,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  cursor: default;
 }
 
 a {
@@ -51,8 +50,11 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
 }
 
 button {
@@ -60,6 +62,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 
 /* Typography */
@@ -119,11 +122,13 @@ p {
 .navbar__log {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: white;
 }
 
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  color: var(--color-white);
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
@@ -175,10 +180,15 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-orange);
+}
+
 /* Section common */
 
 .section {
   padding: 50px;
+  padding-top: 75px;
   text-align: center;
   margin: auto;
 }
@@ -311,6 +321,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -322,7 +333,7 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 6px;
 }
 
 .category__count {
@@ -333,9 +344,9 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration);
 }
@@ -460,6 +471,9 @@ p {
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
+    top: 25px;
+    right: 16px;
+    font-size: var(--font-regular);
   }
   #navbar {
     flex-direction: column;
@@ -482,19 +496,39 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 45px;
+  }
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .category__btn {
+    margin: 2px 0;
+    width: 100%;
+  }
+
   .project {
     flex-grow: 1;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
