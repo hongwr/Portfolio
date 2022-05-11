@@ -26,7 +26,16 @@ navbarMenu.addEventListener("click", (e) => {
   if (link === null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoViews(link);
+});
+
+// 네브바 토글 버튼
+
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // CONTACT ME 누를 시 이동
@@ -66,12 +75,20 @@ arrowUp.addEventListener("click", () => {
 const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
-console.log(projects);
+
 workBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter === null) {
+  if (filter === undefined) {
     return;
   }
+
+  // 이전 것에서 selection을 없애고 새로운 것에 selection 적용
+
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
 
   projectContainer.classList.add("anim-out");
   setTimeout(() => {
@@ -87,7 +104,7 @@ workBtnContainer.addEventListener("click", (e) => {
 });
 
 //중복 기능 유틸리티 함수로 설정
-const scrollIntoViews = (selector) => {
+function scrollIntoViews(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
-};
+}
