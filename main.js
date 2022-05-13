@@ -71,6 +71,11 @@ arrowUp.addEventListener("click", () => {
   scrollIntoViews("#home");
 });
 
+//새로고침 시 홈으로 이동
+
+window.addEventListener("load", () => {
+  scrollIntoViews("#home");
+});
 // My work. project
 
 const workBtnContainer = document.querySelector(".work__categories");
@@ -105,10 +110,6 @@ workBtnContainer.addEventListener("click", (e) => {
 });
 
 //중복 기능 유틸리티 함수로 설정
-function scrollIntoViews(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
 
 // 1. 모든 섹션 요소들과 메뉴 아이템들을 가지고 온다.
 // 2. IntersctionObserver를 이용해서 모든 섹션들을 관찰한다.
@@ -127,6 +128,12 @@ function selectNavItem(selected) {
   selectedNavItem.classList.remove("active");
   selectedNavItem = selected;
   selectedNavItem.classList.add("active");
+}
+
+function scrollIntoViews(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
 const observerOptions = {
