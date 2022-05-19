@@ -11,7 +11,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
-  --color-yellow: #fff7d1;
+  --color-yellow: #fcf2bc;
   --color-orange: #feb546;
   --color-black: #000000;
 
@@ -68,14 +68,14 @@ button {
 /* Typography */
 
 h1 {
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 16px 0px;
 }
 
 h2 {
-  font-size: var(--font-medium);
+  font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -111,7 +111,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: #c5c0fe;
   padding: 8px;
 }
 
@@ -155,8 +155,7 @@ p {
 /* Home */
 
 #home {
-  background: url("imgs/homebackground-200515-154505.webp") center/cover
-    no-repeat;
+  background: url("imgs/Hong.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -169,23 +168,26 @@ p {
   border: 2px solid var(--color-light-white);
 }
 
-.home__title,
+.home__title {
+  color: var(--color-black);
+}
+
 .home__description {
-  color: var(--color-white);
+  color: var(--color-dark-grey);
 }
 
 .home__contact {
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  color: var(--color-white);
+  color: var(--color-light-grey);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-light-grey);
   border-radius: var(--size-border-radius);
 }
 
 .home__contact:hover {
-  background-color: var(--color-orange);
+  background-color: rgb(196, 185, 237);
 }
 
 /* Section common */
@@ -214,9 +216,9 @@ p {
   height: 170px;
   line-height: 170px;
   font-size: 70px;
-  color: var(--color-blue);
+  color: #7c70f9;
   margin: auto;
-  border: 1px solid var(--color-blue);
+  border: 1px solid #7c70f9;
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -225,7 +227,7 @@ p {
   transition: all var(--animation-duration);
 }
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: #f5d775da;
   transform: rotate(30deg) scale(1.1);
   /* transition: 0.3s; */
 }
@@ -331,7 +333,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: #c5c0fe;
   color: var(--color-white);
 }
 
@@ -342,7 +344,7 @@ p {
 }
 
 .category__count {
-  border: 1px solid var(--color-orange);
+  border: 1px solid var(--color-white);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
@@ -428,7 +430,7 @@ p {
 /* Contact */
 
 #contact {
-  background-color: var(--color-pink);
+  background: url("imgs/Hong.png") center/cover no-repeat;
 }
 
 .contact__title,
@@ -447,7 +449,7 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-yellow);
+  color: #b0b0b0;
   transition: all var(--animation-duration) ease-in;
 }
 
@@ -461,7 +463,7 @@ p {
   height: 70px;
   font-size: 50px;
   border-radius: 50%;
-  color: var(--color-blue);
+  color: var(--color-dark-grey);
   opacity: 0;
   pointer-events: none;
   transition: opacity 300ms ease-in;
@@ -483,7 +485,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: #c5c0fe;
   }
 
   #navbar.navbar--dark {
