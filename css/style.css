@@ -1,19 +1,27 @@
 /* Global */
 
 :root {
+    /* App Colors */
+    --color-primary: var(--color-black);
+    --color-primary-variant: var(--color-gray);
+    --color-accent: var(--color-blue);
+    --color-accent-variant: var(--color-orange);
+    --color-text: var(--color-white);
+
     /* Color */
     --color-white: #ffffff;
-    --color-light-white: #eeeeee;
+    --color-black: #050a13;
+    --color-blue: #03e8f9;
+    --color-orange: #fd6413;
+    --color-gray: #1b1e26;
+
+    /* --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
     --color-pink: #fe918d;
     --color-dark-pink: #ff6863;
     --color-dark-grey: #4d4d4d;
-    --color-grey: #616161;
     --color-light-grey: #7c7979;
-    --color-blue: #73aace;
-    --color-yellow: #fcf2bc;
-    --color-orange: #feb546;
-    --color-black: #000000;
+    --color-yellow: #fcf2bc; */
 
     /* Font size */
     --font-large: 48px;
@@ -34,35 +42,43 @@
     --animation-duration: 300ms;
 }
 
-/* Universla tags */
+/* Universal tags */
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 ul {
-    padding-left: 0;
-}
-
-li {
     list-style: none;
+    padding: 0;
 }
 
 button {
     background-color: transparent;
     cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+button:focus {
+    outline: 1px solid var(--color-blue);
 }
 
 /* Typography */
