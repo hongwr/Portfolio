@@ -36,7 +36,7 @@
                 <img class="header__logo__img" src="imgs/KakaoTalk_20220412_004758140-removebg-preview.png" alt="logo" />
                 <h1 class="header__logo__title"><a href="#">King</a></h1>
             </div>
-            <nav>
+            <nav class="header__nav">
                 <ul class="header__menu">
                     <li><a class="header__menu__item active" href="#home">Home</a></li>
                     <li><a class="header__menu__item" href="#about">About</a></li>
@@ -74,7 +74,7 @@
                 </ul>
                 <ul class="jobs">
                     <li class="job">
-                        <img src="imgs/projects/DDH_Logo.png" alt="DDH_Logo" />
+                        <img class="job__logo" src="imgs/projects/DDH_Logo.png" alt="DDH_Logo" />
                         <div>
                             <p class="job__name">DDH as Junior Front-end Engineer</p>
                             <p class="job__period">2022 June - Until now</p>
@@ -216,29 +216,31 @@
             </section>
             <!-- Arrow up -->
             <aside>
-                <a href="#home" title="back to top">
+                <a class="arrow-up" href="#home" title="back to top">
                     <i class="fa-solid fa-arrow-up"></i>
                 </a>
             </aside>
         </main>
         <!-- Footer -->
         <footer id="contact" class="section">
-            <h2>Let&#39;s talk</h2>
-            <p>hongwr88@gmail.com</p>
-            <ul>
-                <li>
-                    <!-- 새로운 tab target -->
-                    <a href="https://github.com/hongwr" target="_blank" title="My github link">
-                        <i class="fa-brands fa-github"> </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://velog.io/@hongwr" target="_blank" title="My blog">
-                        <i class="fa-solid fa-blog"></i>
-                    </a>
-                </li>
-            </ul>
-            <p>Hongwr - All rights reserved</p>
+            <div class="max-container">
+                <h2 class="title">Let&#39;s talk</h2>
+                <p class="description">hongwr88@gmail.com</p>
+                <ul class="contact__links">
+                    <li>
+                        <!-- 새로운 tab target -->
+                        <a class="contact__link" href="https://github.com/hongwr" target="_blank" title="My github link">
+                            <i class="fa-brands fa-github"> </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact__link" href="https://velog.io/@hongwr" target="_blank" title="My blog">
+                            <i class="fa-solid fa-blog"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p>Hongwr - All rights reserved</p>
+            </div>
         </footer>
     </body>
 </html>
