@@ -19,15 +19,14 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans&display=swap" rel="stylesheet"> -->
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/c00f33d327.js" crossorigin="anonymous"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css" />
         <!-- Javascript -->
-        <script src="src/main.js" defer></script>
+        <!-- type module은 서로 변수를 공유하지 않도록 만드는 구조 -->
+        <script type="module" src="src/main.js" defer></script>
+        <script type="module" src="src/projects.js" defer></script>
     </head>
     <body>
         <!-- Header -->
@@ -45,6 +44,9 @@
                     <li><a class="header__menu__item" href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="header__toggle" aria-label="navigation menu toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </header>
         <!-- Main -->
         <main>
@@ -65,11 +67,11 @@
             <section id="about" class="section max-container">
                 <h2 class="title">About me</h2>
                 <p class="description">나의 소개, 어필 문장</p>
-                <p>HTML, CSS, JavaScript, TypeScript, React, Vue, Web APIs</p>
                 <ul class="majors">
                     <li class="major">
                         <i class="fa-brands fa-html5 major__icon"></i>
                         <p class="major__title">Front-end</p>
+                        <p>HTML, CSS, JavaScript, TypeScript, React, Vue, Web APIs</p>
                     </li>
                     <!-- <li></li>
                     <li></li> -->
@@ -155,20 +157,20 @@
                     <p class="description">Projects</p>
                     <ul class="categories">
                         <li>
-                            <button class="category category--selected">All<span class="category__count">8</span></button>
+                            <button class="category category--selected" data-category="all">All<span class="category__count">5</span></button>
                         </li>
                         <li>
-                            <button class="category">Front-end<span class="category__count">8</span></button>
+                            <button class="category" data-category="front-end">Front-end<span class="category__count">5</span></button>
                         </li>
                         <li>
-                            <button class="category">Back-end<span class="category__count">8</span></button>
+                            <button class="category" data-category="back-end">Back-end<span class="category__count">0</span></button>
                         </li>
                         <li>
-                            <button class="category">Mobile<span class="category__count">8</span></button>
+                            <button class="category" data-category="mobile">Mobile<span class="category__count">0</span></button>
                         </li>
                     </ul>
                     <ul class="projects">
-                        <li class="project">
+                        <li class="project" data-category="front-end">
                             <a href="#" target="_blank">
                                 <img src="imgs/projects/ceppro.png" alt="ceppro" class="project__img" />
                                 <div class="project__metadata">
@@ -177,7 +179,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-category="front-end">
                             <a href="#" target="_blank">
                                 <img src="imgs/projects/ashley2.png" alt="ashley2" class="project__img" />
                                 <div class="project__metadata">
@@ -186,7 +188,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-category="front-end">
                             <a href="#" target="_blank"
                                 ><img src="imgs/projects/clear.png" alt="clear" class="project__img" />
                                 <div class="project__metadata">
@@ -195,7 +197,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-category="front-end">
                             <a href="#" target="_blank">
                                 <img src="imgs/projects/dsd.png" alt="dsd" class="project__img" />
                                 <div class="project__metadata">
@@ -204,7 +206,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-category="front-end">
                             <a href="#" target="_blank">
                                 <img src="imgs/projects/torysjourney.PNG" alt="torysjourney" class="project__img" />
                                 <div class="project__metadata">

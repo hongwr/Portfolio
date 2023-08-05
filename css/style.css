@@ -81,7 +81,7 @@ button {
 }
 
 button:focus {
-    outline: 1px solid var(--color-blue);
+    outline: 1px solid transparent;
 }
 
 /* Common */
@@ -144,8 +144,19 @@ button:focus {
     gap: 4px;
 }
 
+.header__toggle {
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+}
+
 .header__menu__item {
+    display: block;
     padding: 8px 16px;
+    border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -217,7 +228,7 @@ button:focus {
 .major {
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
-    color: var(--coplor-text);
+    color: var(--color-text);
     border-radius: 1rem;
     cursor: default;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
@@ -384,6 +395,12 @@ button:focus {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    transition: all 250ms ease-out;
+}
+
+.projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
 }
 
 .project {
@@ -469,7 +486,7 @@ button:focus {
 
 @media screen and (max-width: 768px) {
     .section {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .title {
@@ -483,17 +500,27 @@ button:focus {
     .header {
         flex-direction: column;
         align-items: start;
+        background-color: var(--color-primary);
+    }
+
+    .header__toggle {
+        display: block;
     }
 
     .header__menu {
         flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 1rem 4rem;
+        gap: 1rem;
+    }
+
+    .header__menu.open {
+        display: flex;
     }
 
     .header__nav {
         width: 100%;
-        text-align: center;
-        padding: 1rem 4rem;
-        gap: 1rem;
     }
 
     #home {
